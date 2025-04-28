@@ -3,11 +3,9 @@ import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 
-# Cargar la clave de la API desde el archivo .env (si lo estás usando)
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-# Configurar Gemini
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel("models/gemini-1.5-pro")
 
@@ -23,7 +21,7 @@ def analizar():
     caso = data.get('caso', '')
     respuesta_usuario = data.get('respuesta_usuario', '')
 
-    # Nuevo prompt mejorado
+    
     prompt = f"""
 Actúa como un experto en la norma ISO 45001. Tu tarea será:
 
@@ -38,7 +36,7 @@ Actúa como un experto en la norma ISO 45001. Tu tarea será:
    {respuesta_usuario}
 
 3. Analiza qué tan correcta es la respuesta del usuario:
-   - ¿En qué coincide con la norma?
+   - ¿En qué coincide con la norma y con tu respuesta?
    - ¿En qué se equivoca o qué puede mejorar?
    - ¿Qué partes están bien justificadas y cuáles no?
 
