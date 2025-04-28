@@ -20,7 +20,7 @@ document.getElementById("caseForm").addEventListener("submit", async function (e
       });
   
       const data = await response.json();
-      respuestaIA.textContent = data.respuesta_ia;
+      respuestaIA.innerHTML = marked.parse(data.respuesta_ia);
   
     } catch (error) {
       respuestaIA.textContent = "Ocurrió un error al contactar con la IA.";
