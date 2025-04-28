@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Analizador ISO 45001</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='img/imagesUCE.png') }}" alt="Logo">
+  </div>
+  <div class="logo-iso-container">
+    <img src="{{ url_for('static', filename='img/iso-logo.png') }}" alt="Logo">
+  </div>
+  <div class="container">
+    <h1>ANALIZAR IA DE CASOS ISO 45001</h1>
+
+    <form id="caseForm">
+      <label for="caso">Caso de estudio:</label>
+      <textarea id="caso" required placeholder="Escribe el caso aquí..."></textarea>
+
+      <label for="respuesta">Tu respuesta:</label>
+      <textarea id="respuesta" required placeholder="¿Qué procedimientos realizarias?"></textarea>
+
+      <button type="submit">Analizar con IA</button>
+    </form>
+
+    <div id="resultado" class="hidden">
+      <h2>Respuesta de la IA:</h2>
+      <pre id="respuestaIA"></pre>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
