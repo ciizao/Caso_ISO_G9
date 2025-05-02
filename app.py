@@ -44,7 +44,7 @@ def analizar():
 
     Organiza tu respuesta de forma clara bajo los siguientes apartados:
     - Respuesta oficial basada en ISO 45001
-    - Comparación con la respuesta del usuario
+    - Comparación con la respuesta del usuario en una tabla
     - Correcciones y mejoras sugeridas
     - Nota final sobre 10
     """
@@ -56,4 +56,5 @@ def analizar():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
