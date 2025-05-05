@@ -40,13 +40,13 @@ def analizar():
     - ¿En qué se equivoca o qué puede mejorar?
     - ¿Qué partes están bien justificadas y cuáles no?
 
-    4. Finalmente, otorga una nota sobre 10 puntos basada en la adherencia a los principios de ISO 45001.
+    4. Finalmente, otorga un porcentaje sobre 100% de la respuesta del usuario basada en la adherencia a los principios de ISO 45001.
 
     Organiza tu respuesta de forma clara bajo los siguientes apartados:
     - Respuesta oficial basada en ISO 45001
     - Comparación con la respuesta del usuario en una tabla
     - Correcciones y mejoras sugeridas
-    - Nota final sobre 10
+    - Porcentaje sobre 100%
     """
 
     try:
