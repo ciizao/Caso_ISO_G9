@@ -23,7 +23,7 @@ def analizar():
 
     
     prompt = f"""
-    Actúa como un experto en la norma ISO 45001. Tu tarea será:
+    Actúa como un experto en la norma ISO 45001 con 10 años de experiencia. Tu tarea será:
 
     1. Proporcionar tu propia respuesta profesional al siguiente caso de estudio, basándote estrictamente en la norma ISO 45001.
     
